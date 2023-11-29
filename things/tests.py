@@ -26,6 +26,7 @@ class ThingFormTestCase(TestCase):
                                       quantity=0)
         form = ThingForm(data=self.form_input)
         self.assertFalse(form.is_valid())
+
     def test_name_is_less_than_or_equal_to_35_characters(self):
         self.form_input["name"] = "T" * 36
         form = ThingForm(data=self.form_input)
